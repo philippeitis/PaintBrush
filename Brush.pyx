@@ -253,7 +253,7 @@ cpdef float diff(list c1, list c2):
     """
     cdef int d1, d2, d3
 
-    d1 = (c1[0] - c2[0]) ** 2
-    d2 = (c1[1] - c2[1]) ** 2
-    d3 = (c1[2] - c2[2]) ** 2
-    return sqrt(d1 + d2 + d3)
+    d1 = c1[0] - c2[0]
+    d2 = c1[1] - c2[1]
+    d3 = c1[2] - c2[2]
+    return sqrt(d1 * d1 + d2 * d2 + d3 * d3)
